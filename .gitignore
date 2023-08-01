@@ -1,0 +1,21 @@
+# Django project related files
+*.pyc
+*.pyo
+__pycache__/
+*.sqlite3
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg/
+dist/
+build/
+*.log
+
+# Environment files
+.env
+
+# Compiled Python files
+*.pyc
+*.pyo
+__pycache__/
