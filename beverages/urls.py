@@ -16,14 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.decorators.csrf import csrf_exempt
 #import all views from beverages app
 from beverages import views
 from rest_framework.urlpatterns import format_suffix_patterns
+from graphene_django.views import GraphQLView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("beverages/", views.beverage_list),
     path("beverages/<int:pk>/", views.beverage_detail),
+    path("graphql", csrf_exempt(GraphQLView.as_view(graphiql=True))),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

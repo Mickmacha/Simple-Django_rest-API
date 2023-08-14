@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "graphene_django",
     "beverages",
     "rest_framework",
     "django.contrib.admin",
@@ -71,6 +72,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "beverages.wsgi.application"
 
+GRAPHENE = {
+    "SCHEMA": "beverages.schema.schema",
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
